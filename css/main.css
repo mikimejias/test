@@ -1,0 +1,249 @@
+/* ----- Fuentes ----- */
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,300i");
+/* ----- Colors ----- */
+/* ----- General ----- */
+body {
+  background-color: #f1f1f1;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0;
+  color: #575757; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  margin-bottom: 0; }
+
+.ital {
+  font-style: italic; }
+
+.bold {
+  font-weight: bold; }
+
+/* ----- Header ----- */
+nav {
+  position: fixed;
+  z-index: 3;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  transition: .3s; }
+  nav.nav-scroll {
+    background: #f1f1f1;
+    border-bottom: 3px solid #017c8a; }
+    nav.nav-scroll li a {
+      color: #575757; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    nav ul li {
+      margin: 0 .4em; }
+      nav ul li .current {
+        background-color: #017c8a;
+        color: white;
+        border-radius: 5px; }
+      nav ul li a {
+        font-weight: 300;
+        text-decoration: none;
+        padding: .8em 1em;
+        color: white;
+        transition: all 500ms ease; }
+        nav ul li a:hover {
+          background-color: #017c8a;
+          color: white;
+          border-radius: 5px; }
+
+/* ----- Showcase ----- */
+#showcase {
+  width: 100%;
+  height: 660px;
+  position: relative;
+  background: linear-gradient(to right, rgba(1, 124, 138, 0.3), rgba(0, 176, 196, 0.3)), url("../img/pexels-photo.jpg");
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #showcase .showcase-content {
+    width: 70%;
+    color: white; }
+    #showcase .showcase-content h1 {
+      margin: 0;
+      font-weight: 100;
+      font-size: 6em;
+      text-shadow: 1px 1px 1px #000; }
+    #showcase .showcase-content .principal-content {
+      height: 100px;
+      border-left: 6px solid white;
+      margin-left: 10px;
+      padding-left: 5px;
+      display: flex;
+      flex-direction: column; }
+      #showcase .showcase-content .principal-content .p1, #showcase .showcase-content .principal-content .p2 {
+        flex: 1;
+        margin: 0;
+        font-style: italic;
+        text-shadow: 1px 1px 1px #000;
+        font-size: 2em;
+        display: flex;
+        align-items: center; }
+
+#about {
+  width: 100%;
+  padding-top: 80px; }
+  #about .about-title {
+    height: 80px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #00b0c4;
+    transition: .3s; }
+    #about .about-title.is-showing {
+      opacity: 1; }
+  #about .about-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: all .3s; }
+    #about .about-body.is-showing {
+      opacity: 1; }
+
+#services {
+  width: 100%;
+  padding-top: 80px;
+  background: #e2dfdf; }
+  #services .services-title {
+    height: 80px;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #00b0c4;
+    transition: all .3s; }
+    #services .services-title.is-showing {
+      opacity: 1; }
+  #services .card {
+    width: 100%;
+    margin-top: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s; }
+    #services .card.is-showing {
+      opacity: 1; }
+    #services .card .card-logo {
+      padding: 10px;
+      height: 150px;
+      width: 150px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 1s; }
+    #services .card .card-title {
+      text-align: center;
+      margin-top: 5px;
+      transition: all 1s; }
+    #services .card .card-body {
+      text-align: center;
+      transition: all 1s; }
+    #services .card:hover {
+      background: white;
+      box-shadow: 1px 1px 4px #575757; }
+      #services .card:hover .card-logo {
+        transform: scale(1.1);
+        color: #00b0c4; }
+      #services .card:hover .card-title, #services .card:hover .card-body {
+        background: #00b0c4;
+        color: white; }
+
+#habilities {
+  width: 100%;
+  padding-top: 80px;
+  background: linear-gradient(to right, #017c8a, #00b0c4);
+  color: white;
+  border-bottom: 4px solid white; }
+  #habilities .habilities-title {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid white;
+    opacity: 0;
+    transition: all .3s; }
+    #habilities .habilities-title.is-showing {
+      opacity: 1; }
+  #habilities .habilities-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: all .3s; }
+    #habilities .habilities-body.is-showing {
+      opacity: 1; }
+
+#contact {
+  width: 100%;
+  height: 250px;
+  padding-top: 20px;
+  background: #575757;
+  color: white; }
+  #contact .contact-title {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #00b0c4;
+    opacity: 0;
+    transition: all .3s; }
+    #contact .contact-title.is-showing {
+      opacity: 1; }
+  #contact .contact-body {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 5px solid #00b0c4;
+    opacity: 0;
+    transition: all .3s; }
+    #contact .contact-body.is-showing {
+      opacity: 1; }
+    #contact .contact-body ul {
+      list-style: none; }
+
+footer {
+  height: 200px;
+  background: #575757;
+  color: white; }
+  footer p {
+    text-align: center; }
+
+@media (max-width: 550px) {
+  #showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #showcase .showcase-content {
+      width: 100%;
+      color: white; }
+      #showcase .showcase-content h1 {
+        margin: 0;
+        font-weight: 100;
+        font-size: 3.4em;
+        text-shadow: 1px 1px 1px #000; }
+      #showcase .showcase-content .principal-content {
+        height: 60px;
+        border-left: 3px solid white;
+        margin-left: 5px;
+        display: flex;
+        flex-direction: column; }
+        #showcase .showcase-content .principal-content .p1, #showcase .showcase-content .principal-content .p2 {
+          font-size: 2em;
+          display: flex;
+          align-items: center; } }
