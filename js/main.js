@@ -4,7 +4,7 @@ $(window).on('scroll', function() {
     'transform': 'translate(0px,'+$(window).scrollTop()/2+'%)'
   });
 
-  if($(window).scrollTop() > 570) {
+  if($(window).scrollTop() > 100) {
     $('nav').addClass('nav-scroll');
   } else {
     $('nav').removeClass('nav-scroll');
@@ -61,6 +61,15 @@ $(window).on('scroll', function() {
 })
 
 $(function(){
+
+  $('ul li.dropdown').hover(function() {
+    $(this).find('.dropdown-content').stop(true, true).slideDown('medium');
+    console.log('hover');
+  }, function() {
+    $(this).find('.dropdown-content').stop(true, true).slideUp('medium');
+  });
+
+  
   var linkskroll = $('.scroll');
 
   //smooth scrolling
@@ -71,6 +80,8 @@ $(function(){
       scrollTop: $(this.hash).offset().top
     }, 1000);
   });
+
+  
 
   
 });
